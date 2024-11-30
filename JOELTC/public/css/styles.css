@@ -1,0 +1,478 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-image: url('/images/CAR.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Agregar sombra gris */
+  border-radius: 8px;
+}
+
+/* Imagen del auto en detalles de vehículos */
+.modal img {
+  max-width: 100%;
+  height: auto; /* Mantiene la proporción de la imagen */
+  display: block;
+  margin: 0 auto; /* Centra la imagen */
+}
+
+/* Media Queries para ajustar la imagen del auto en dispositivos pequeños */
+
+/* Dispositivos pequeños (teléfonos en modo vertical) */
+@media (max-width: 600px) {
+  .modal img {
+    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+  }
+}
+
+/* Dispositivos medianos (tabletas) */
+@media (max-width: 768px) {
+  .modal img {
+    max-width: 90%; /* Reduce un poco el tamaño en tabletas */
+    height: auto; /* Mantiene la proporción original de la imagen */
+  }
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    max-width: 100%;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-section {
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  th, td {
+    padding: 10px 5px;
+  }
+}
+
+/* Resto de tu CSS */
+h1 {
+  text-align: center;
+  color: #444;
+  font-size: 2.2rem;
+}
+
+.form-section {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.company-logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+input, textarea {
+  display: block;
+  width: 97%;
+  margin: 12px 0; /* Reducir el margen vertical */
+  padding: 12px; /* Reducir el padding */
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  text-transform: uppercase; /* Convertir el texto a mayúsculas en los inputs y textareas */
+  background-color: #fff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Agregar sombra gris */
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 12px 0; /* Reducir el margen vertical */
+  padding: 10px; /* Reducir el padding */
+  border-radius: 5px;
+  border: none;
+  background-color: #28a745; /* Botón de color verde por defecto */
+  color: #fff;
+  cursor: pointer;
+  text-transform: none; /* Eliminar mayúsculas en los botones */
+  font-size: 1rem; /* Reducir el tamaño de fuente en los botones */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Agregar sombra gris */
+}
+
+button:hover {
+  background-color: #1e7e34; /* Mantener el color del hover del botón */
+}
+
+/* Estilo específico para el botón de Agregar Gasto */
+button.add-expense {
+  background-color: #0069d9; /* Azul para Agregar Gasto */
+}
+
+button.add-expense:hover {
+  background-color: #0056b3; /* Azul oscuro al pasar el cursor */
+}
+
+/* Estilo específico para el botón de Detalles de vehículos vendidos */
+button.details-sold-cars {
+  background-color: #0069d9; /* Azul para Detalles de vehículos vendidos */
+}
+
+button.details-sold-cars:hover {
+  background-color: #0056b3; /* Azul oscuro al pasar el cursor */
+}
+
+textarea {
+  resize: vertical;
+  height: 70px;
+}
+
+.table-section {
+  margin-top: 25px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+table, th, td {
+  border: 2px solid #ddd;
+}
+
+th, td {
+  padding: 7px;
+  text-align: left;
+}
+
+th {
+  background-color: #e0e0e0;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 60px;
+}
+
+/* Contenido del modal */
+.modal-CONF{
+  background-color: #fefefe;
+  margin: 5% auto; /* Centra el modal verticalmente con un margen superior */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 690px; /* Reduce el tamaño máximo del modal */
+  box-sizing: border-box;
+  position: relative;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
+  border-radius: 19px; /* Bordes redondeados */
+}
+/* Contenido del modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* Centra el modal verticalmente con un margen superior */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 690px; /* Reduce el tamaño máximo del modal */
+  box-sizing: border-box;
+  position: relative;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
+  border-radius: 19px; /* Bordes redondeados */
+}
+.gastos {
+  margin-top: -50px; /* Reduce la separación superior */
+  margin-bottom: -30px; /* Reduce la separación inferior */
+  padding: 10px 0; /* Ajusta el padding si es necesario */
+  font-size: 1.3rem;
+}
+
+
+/* Botón de cerrar */
+.close {
+  position: absolute;
+  right: 10px;
+  top: -14px;
+  font-size: 3.0rem; /* Tamaño del botón de cerrar ajustado */
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.sold-cars-modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* Centra el modal verticalmente con un margen superior */
+  padding: 20px;
+  border: 2px solid #888;
+  max-width: 90%; /* Permite que el modal se ajuste al ancho de la pantalla */
+  width: 75%; /* Mantiene un ancho máximo del 75% en pantallas más grandes */
+  font-size: 1.2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para darle profundidad */
+  border-radius: 10px; /* Bordes redondeados para un diseño más moderno */
+  position: relative; /* Necesario para posicionar el botón de cerrar */
+}
+
+.closeSold {
+  position: absolute;
+  top: -15px; /* Ajusta la distancia desde el borde superior del modal */
+  right: 10px; /* Ajusta la distancia desde el borde derecho del modal */
+  font-size: 2.9rem; /* Tamaño del botón de cerrar ajustado usando rem */
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s; /* Añade una transición suave para el cambio de color */
+}
+
+.closeSold:hover, .close:focus {
+  color: #000; /* Cambia el color al pasar el mouse sobre el botón */
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Estilo para el contenedor de Ganancia Total */
+.total-gain-container {
+  margin-top: -8px; /* Espacio superior para separar de la tabla */
+  text-align: right; /* Alinea el contenido a la derecha */
+}
+
+/* Estilo para la etiqueta de Ganancia Total */
+.total-gain-label {
+  font-weight: 500; /* Negrita */
+  margin-right: 3px; /* Espacio entre el texto y el campo numérico */
+  display: inline-block; /* Asegura que el texto y el campo numérico estén en la misma línea */
+}
+
+/* Estilo para el campo de Ganancia Total */
+#totalGainInventory,
+#totalGainSold {
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 150px;
+  display: inline-block; /* Asegura que el campo numérico esté en la misma línea que el texto */
+  font-size: 1.0em; /* Ajusta este valor según el tamaño deseado */
+  color: rgb(0, 145, 0); /* Cambia el color de los números a verde */
+  font-weight: 600; /* Aumenta el grosor de los números */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.6); /* Agregar sombra gris */
+}
+
+/* Estilo para el contenedor de Pérdida Total */
+.total-loss-container {
+  margin-top: -20px; /* Ajusta el margen superior para separarlo adecuadamente de la ganancia */
+  text-align: right; /* Alinea el contenido a la derecha */
+}
+
+/* Estilo para la etiqueta de Pérdida Total */
+.total-loss-label {
+  font-weight: 500; /* Negrita */
+  margin-right: 3px; /* Espacio entre el texto y el campo numérico */
+  display: inline-block; /* Asegura que el texto y el campo numérico estén en la misma línea */
+}
+
+/* Estilo para el campo de Pérdida Total */
+#totalLossInventory,
+#totalLossSold {
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 150px;
+  display: inline-block; /* Asegura que el campo numérico esté en la misma línea que el texto */
+  font-size: 1.0em; /* Ajusta este valor según el tamaño deseado */
+  color: rgb(245, 14, 14); /* Cambia el color de los números a rojo */
+  font-weight: 600; /* Aumenta el grosor de los números */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.6); /* Agregar sombra gris */
+}
+
+/*Estilo para Inventario*/
+
+/* Estilo para el contenedor del formulario */
+
+/* Estilo para la etiqueta de Valor Neto de Activos */
+.form-section h2 {
+ 
+  margin-top: -13px; /* Ajusta este valor según lo necesites */
+}
+
+.inventario-label {
+  font-weight: 500; /* Negrita */
+  margin-right: 3px; /* Espacio entre el texto y el campo numérico */
+  display: inline-block; /* Asegura que el texto y el campo numérico estén en la misma línea */
+}
+
+/* Estilo para el campo de Valor Neto de Activos */
+.valor-nuevo {
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 150px;
+  display: inline-block; /* Asegura que el campo numérico esté en la misma línea que el texto */
+  font-size: 1.0em; /* Ajusta este valor según el tamaño deseado */
+  color: rgb(73, 72, 72); /* Cambia el color de los números a rojo */
+  font-weight: 600; /* Aumenta el grosor de los números */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.6); /* Agregar sombra gris */
+}
+
+@media (max-width: 1024px) {
+  .sold-cars-modal-content {
+    top: 10%; /* Ajusta este valor según necesites */
+    width: 80%; 
+    padding: 20px; /* Elimina el signo negativo para el padding */
+    font-size: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .closeSold {
+    right: 15px;
+    top: -8px;
+  }
+}
+
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+  .sold-cars-modal-content {
+    width: 95%; /* Aumenta el ancho para pantallas pequeñas */
+    padding: 15px; /* Reduce el padding en pantallas pequeñas */
+    font-size: 1rem; /* Reduce el tamaño de fuente en pantallas pequeñas */
+  }
+
+  .close {
+    right: 20px; /* Ajusta la posición del botón cerrar */
+    top: 10px; /* Ajusta la posición del botón cerrar */
+    font-size: 1.3rem; /* Reduce el tamaño de la fuente del botón cerrar */
+  }
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%; /* Aumenta el tamaño en pantallas pequeñas */
+    padding: 15px; /* Reduce el padding */
+  }
+
+  .close {
+    right: 10px; /* Ajusta la distancia en pantallas pequeñas */
+    top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 100%; /* Asegura que el modal no se salga del contenedor */
+    padding: 10px; /* Reduce aún más el padding */
+  }
+  .gastos {
+    margin-top: -48px; /* Reduce la separación superior */
+    margin-bottom: -40px; /* Reduce la separación inferior */
+    font-size: 1.1rem;
+  }
+  
+  .close {
+    font-size: 3.2rem; /* Reduce el tamaño de la "X" en pantallas muy pequeñas */
+    right: 10px;
+    top: 5px;
+  }
+}
+.profit {
+  color: green;
+  font-weight: bold;
+}
+
+.loss {
+  color: red;
+  font-weight: bold;
+}
+/* Estilo para el botón de Eliminar */
+button.delete-button:hover {
+  background-color: #600000;
+}
+
+/* Selecciona cualquier botón que tenga el texto "Eliminar" */
+button[onclick^="deleteCar"] {
+  background-color: #8B3232;
+  color: #fff;
+}
+
+button[onclick^="deleteCar"]:hover {
+  background-color: #A83838;
+}
+
+/* Aplicar color azul al botón de Editar */
+button[onclick^="editCar"] {
+  background-color: #0069d9;
+  color: #fff;
+}
+
+button[onclick^="editCar"]:hover {
+  background-color: #0056b3;
+}
+
+/* Confirm No Button */
+#confirmNoButton {
+  background-color: #28a745; /* Rojo */
+}
+
+/* Confirm Yes Button */
+#confirmYesButton {
+  background-color: #dc3545; /* Verde */
+}
+
+
+/* Confirm No Button NO VENDER */
+#sellConfirmYesButton {
+  background-color: #dc3545; /* Rojo */
+}
+
+/* Confirm Yes Button */
+#sellConfirmNoButton {
+  background-color:#28a745; /* Verde */
+}
+

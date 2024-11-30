@@ -1,0 +1,22 @@
+{
+  "name": "joeltc",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mssql": "^11.0.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.4",
+    "sqlite3": "^5.1.7"
+  }
+}
+

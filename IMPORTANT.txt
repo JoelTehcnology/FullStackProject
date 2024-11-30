@@ -1,0 +1,1 @@
+Para ejecutar escribir "npm run dev" en la consola, enter y luego ejecutar el proyecto
